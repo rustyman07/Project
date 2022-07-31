@@ -20,29 +20,29 @@
   outline: none;
   border: none;
   text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
-  background-color: #0F0F0F;
+}html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    background-color: var(--black);
+    
 }
 section{
-    padding: 5rem 10%;
+    padding: 0 10%;
     overflow-y: hidden;
+
 }
 
 header{
+    padding:2rem 10%;
+    height: 10vh;
 
-
-    padding:2rem 10%
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 .logo{
     font-size: 2.5rem;
@@ -73,97 +73,78 @@ header nav button{
     letter-spacing: .3rem;
     
 }
-.hero{
+.container{
     display: flex;
-  height:100%;
-    padding: 5rem 10%;
     position: relative;
+    max-width: 1440px;
+    width: 100%;
 
-
-    overflow-x: hidden;
+overflow: hidden;
 }
+
 .text{
     width: 50%;
     display: flex;
     flex-direction: column;
- 
     justify-content: center;
+   
 }
-.text h3{
+.text p{
     color: var(--white);
     font-size: 2.5rem;
     line-height: 5rem;
     font-weight: 300;
+  
 }
-
-.text h1{
+.text p span{
     color: var(--white);
+}
+.text h1{
+    color: var(--yellow);
     font-size: 13rem;
     line-height: 10rem;
     font-family: 'Teko', sans-serif;
-    margin-left: 3vw;
+    margin-left: 2vw;
 
 }
 .text h1 span{
-    color:var(--yellow);
-    margin-left: 8vw;
+    color:var(--white);
+    margin-left: 20%;
     font-family: 'Teko', sans-serif;
 }
-.text h3:last-child{
-margin-left: 30%;
-color: var(--white);
-font-size: 2.5rem;
-line-height: 1.5rem;
-font-weight: 300;
-
-
-}
+.text p:last-child{
+    margin-left: 30%;
+    color: var(--yellow);
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+    font-weight: 300;
+    
+} 
 .image{
     width: 50%;
     position: relative;
     display: flex;
     justify-content: center;
-  height:100%;
-}
-.hero .image .toga{
-    max-width: 690px;
-    position: absolute;
-    margin-top: 4.5rem;
-    width: 100%;
-}
-
-.hero .image .hero-pic{
-    max-width: 690px;
-    width: 100%;
-    max-height: 728px;
-    
     margin-top: 5rem;
-
 }
-.hero::before{
-    content: 'RUSTY';
-    color: var(--white);
-    position: absolute;
-    font-family: 'Teko', sans-serif;
-    font-weight: bold;
-    font-size: 30rem;   
-    writing-mode: vertical-lr;
-    opacity: 0.3;
-    top:0;
-    right:32%;  
-    animation: anim 10s linear infinite;
-    width: auto;
-    transform:translateY(-100%);
+.image .hero-pic{
+    max-width: 690px;
+    width: 100%;
  
+    max-height: 728px;
 
 }
-
-.container{
+.image .toga{
+    max-width: 690px;
+    position: absolute;
+  
+    width: 100%;
+}
+.hero{
     position: relative;
-    overflow-y: hidden;
   
 }
-.container::after{
+.hero::after{
     content: '';
     height: 20%;
     width: 100%;
@@ -177,64 +158,98 @@ font-weight: 300;
 
 
 }
-.hero::after{
-    content: 'RUSTY';
-    color: var(--white);
-    position: absolute;
-    font-family: 'Teko', sans-serif;
-    font-weight: bold;
-    font-size: 30rem;   
-    writing-mode: vertical-lr;
-    opacity: 0.3;
-    top:0;
-    right:32%; 
-
-    transform:translateY(-100%);
-    animation: anim 10s 5s linear infinite;
-    z-index:-1;
-}
-
 @media(max-width:1200px){
-    html,::before{
-        font-size: 55.5%;
-    }
-    @media(max-width:768px){
-        .hero::after,.hero::before{
-            font-size: 25rem;
-        }
-    }
   
-
-}@media(max-width:450px){
-     .text h3,.text h3:last-child{
+    .hero::after,.hero::before{
+        font-size: 25rem;
+    }
+    .text p,.text p:last-child{
         font-size: 1.6rem;
      }
     
      .text h1{
-        font-size: 8rem;
-    line-height: 7rem;
+        font-size: 10rem;
+    line-height: 8rem;
      }
-    .hero{
-        flex-direction: column;
+}
+@media(max-width:991px){
+    html{
+        font-size: 55%;
     }
     .hero::after,.hero::before{
-        font-size: 20rem;
-    }.image{
-        width: 100%;
-    }.text{
-        width: 100%;
-    } .hero .image .hero-pic{
-     height:auto;
+        font-size: 25rem;
     }
+    .text p,.text p:last-child{
+        font-size: 1.6rem;
+     }
     
+     .text h1{
+        font-size: 9rem;
+    line-height: 8rem;
+     }
 }
-@keyframes anim{
-    0% {
-       transform:translateY(-100%);
 
-    }100%{
-        transform:translateY(200%);
+
+@media(max-width:768px){
+    nav ul{
+        display: none;
+    }
+    .hero::after,.hero::before{
+        font-size: 25rem;
+    }
+    .text p,.text p:last-child{
+        font-size: 1.6rem;
+     }
+    .text{
+        padding: 10rem 0;
+       
+    }
+     .text h1{
+        font-size: 8rem;
+    line-height: 6rem;
+     }
+     .container{
+        flex-direction: column;
+    }
+     .container .image{
+        width: 100%;
+    }.container .text{
+        width: 100%;
     }
 }
 
+@media(max-width:480px)
+{ html{
+    font-size: 50%;
+}
+    .text p{
+       font-size: 1.6rem;
+       line-height: 4rem;
+    }
+.text p:last-child{
+    line-height: 2rem;
+    }
+   
+    .text h1{
+       font-size: 6.5rem;
+   line-height: 5.5rem;
+    }
+    .text h1 span{
+     
+    }
 
+    .text{
+        padding: 5rem 0;
+       
+    }
+
+  
+   .image{
+    margin-top: 2rem;
+   }
+   
+   .hero::after,.hero::before{
+       font-size: 20rem;
+   }
+   
+}
