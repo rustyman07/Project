@@ -128,14 +128,14 @@ font-weight: 300;
     max-width: 690px;
     position: absolute;
     margin-top: 4.5rem;
-
+    width: 100%;
 }
 
 .hero .image .hero-pic{
     max-width: 690px;
     width: 100%;
     max-height: 728px;
-    height: auto;
+    
     margin-top: 5rem;
 
 }
