@@ -75,7 +75,7 @@ header nav button{
 }
 .hero{
     display: flex;
-
+  height:100%;
     padding: 5rem 10%;
     position: relative;
 
@@ -123,6 +123,7 @@ font-weight: 300;
     position: relative;
     display: flex;
     justify-content: center;
+  height:100%;
 }
 .hero .image .toga{
     max-width: 690px;
