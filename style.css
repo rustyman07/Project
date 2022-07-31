@@ -218,9 +218,9 @@ font-weight: 300;
     }
     .hero::after,.hero::before{
         font-size: 20rem;
-    }.hero .image{
+    }.image{
         width: 100%;
-    }.hero .text{
+    }.text{
         width: 100%;
     }
     
