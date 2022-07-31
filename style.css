@@ -222,6 +222,8 @@ font-weight: 300;
         width: 100%;
     }.text{
         width: 100%;
+    } .hero .image .hero-pic{
+     height:auto;
     }
     
 }
