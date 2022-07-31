@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Teko:wght@300;400;500;700&display=swap');
+:root {
+  --yellow:#F9B402;
+  --black:#0F0F0F;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --border:.1rem solid rgba(0,0,0,.3);
+}
+
+*,::after,::before {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  background-color: #0F0F0F;
+}
+section{
+    padding: 5rem 10%;
+    overflow-y: hidden;
+}
+
+header{
+
+
+    padding:2rem 10%
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--white);
+    letter-spacing: .3rem;
+    font-weight: 700;
+ 
+
+}
+.logo span{
+    color: var(--yellow);
+}
+ul li{
+    display: inline-block;
+    margin-left: 5rem;
+
+}
+ul li a{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+header nav button{
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--yellow);
+    background-color: var(--black);
+    color: var(--white);
+    letter-spacing: .3rem;
+    
+}
+.hero{
+    display: flex;
+
+    padding: 5rem 10%;
+    position: relative;
+
+    max-height: 1080px;
+    overflow-x: hidden;
+}
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content: center;
+}
+.text h3{
+    color: var(--white);
+    font-size: 2.5rem;
+    line-height: 5rem;
+    font-weight: 300;
+}
+
+.text h1{
+    color: var(--white);
+    font-size: 13rem;
+    line-height: 10rem;
+    font-family: 'Teko', sans-serif;
+    margin-left: 3vw;
+
+}
+.text h1 span{
+    color:var(--yellow);
+    margin-left: 8vw;
+    font-family: 'Teko', sans-serif;
+}
+.text h3:last-child{
+margin-left: 30%;
+color: var(--white);
+font-size: 2.5rem;
+line-height: 1.5rem;
+font-weight: 300;
+
+
+}
+.image{
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.hero .image .toga{
+    max-width: 690px;
+    position: absolute;
+    margin-top: 4.5rem;
+    width: 100%;
+}
+
+.hero .image .hero-pic{
+    max-width: 690px;
+    width: 100%;
+    max-height: 728px;
+    height: auto;
+    margin-top: 5rem;
+
+}
+.hero::before{
+    content: 'RUSTY';
+    color: var(--white);
+    position: absolute;
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
+    font-size: 30rem;   
+    writing-mode: vertical-lr;
+    opacity: 0.3;
+    top:0;
+    right:32%;  
+    animation: anim 10s linear infinite;
+    width: auto;
+    transform:translateY(-100%);
+ 
+
+}
+
+.container{
+    position: relative;
+    overflow-y: hidden;
+  
+}
+.container::after{
+    content: '';
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    background: linear-gradient(to top,rgb(1, 1, 1),transparent);
+    z-index:9999 ;
+  
+
+
+}
+.hero::after{
+    content: 'RUSTY';
+    color: var(--white);
+    position: absolute;
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
+    font-size: 30rem;   
+    writing-mode: vertical-lr;
+    opacity: 0.3;
+    top:0;
+    right:32%; 
+
+    transform:translateY(-100%);
+    animation: anim 10s 5s linear infinite;
+    z-index:-1;
+}
+
+@media(max-width:1200px){
+    html,::before{
+        font-size: 55.5%;
+    }
+    @media(max-width:768px){
+        .hero::after,.hero::before{
+            font-size: 25rem;
+        }
+    }
+  
+
+}@media(max-width:450px){
+     .text h3,.text h3:last-child{
+        font-size: 1.6rem;
+     }
+    
+     .text h1{
+        font-size: 8rem;
+    line-height: 7rem;
+     }
+    .hero{
+        flex-direction: column;
+    }
+    .hero::after,.hero::before{
+        font-size: 20rem;
+    }.hero .image{
+        width: 100%;
+    }.hero .text{
+        width: 100%;
+    }
+    
+}
+@keyframes anim{
+    0% {
+       transform:translateY(-100%);
+
+    }100%{
+        transform:translateY(200%);
+    }
+}
+
+
